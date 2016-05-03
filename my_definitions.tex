@@ -1,0 +1,39 @@
+
+
+% Highlight an equation (or a section of an equation) in light blue. Make sure,
+% if using an align environment, not to have any ampersands inside the
+% highlight tag. 
+\newcommand{\highlight}[1]{\colorbox{blue!15}{\ensuremath{#1}\xspace}}
+
+\newcommand{\about}{\ensuremath{\sim}}
+
+% This environment is a bulleted list with extra spaces between the entries for legibility. 
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
+
+% Names with special characters. 
+\newcommand{\Alfven}{Alfv\'en\xspace}
+\newcommand{\Ampere}{Amp\`ere\xspace}
+\newcommand{\Schrodinger}{Schr\"odinger\xspace}
+
+% Underline for vectors, double underline for tensors. 
+\renewcommand{\vec}[1]{\ensuremath{\underline{#1}}}
+\newcommand{\tensor}[1]{\ensuremath{\underline{\underline{#1}}}}
+
+% Differential operators. Make the fractions shorter by using tfrac. 
+\newcommand{\dd}[1]{\ensuremath{ \tfrac{\partial}{\partial #1} }\xspace}
+\newcommand{\ddt}{\dd{t}\xspace}
+\newcommand{\curl}[1]{\ensuremath{ \nabla \times \vec{#1} }\xspace}
+\renewcommand{\div}[1]{\ensuremath{ \nabla \cdot \vec{#1} }\xspace}
+\newcommand{\grad}[1]{\ensuremath{ \nabla #1 }\xspace}
+
+\newcommand{\dt}{\ensuremath{\delta \hspace{-0.1em} t}\xspace}
+\newcommand{\dr}{\ensuremath{\delta \hspace{-0.1em} r}\xspace}
+\newcommand{\dL}{\ensuremath{\delta \hspace{-0.1em} L}\xspace}
+
+% Azimuthal modenumber, typically indicated with a lowercase m. 
+\newcommand{\azm}{\ensuremath{m}\xspace}
+
+% One over mu zero, in a small fraction. 
+\newcommand{\mz}{\ensuremath{\mu_0}\xspace}
+\newcommand{\oomz}{\ensuremath{ \tfrac{1}{\mz} }\xspace}
+
